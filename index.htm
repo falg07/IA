@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI & IOT</title>
+</head>
+<title> PROJETOS IA & IOT </title>
+<body style=background-color:gray> <! --DEFINE A COR DE FUNDO DA PÁGINA-->
+<center><font color='blue'><h1>IA & IOT</font></center></h1> <! --ESCREVE "PRATELEIRAS" EM COR AZUL NA PÁGINA-->
+<center><font color='blue'><h1>PROJETOS IA & IOT</font></center></h1> <! --ESCREVE "CONTROLE ESTOQUE - COMERCIO" EM COR AZUL NA PÁGINA-->
+<body>
+
+<div id='wrapper'><center><img src='https://computerworld.com.br/wp-content/uploads/2019/08/iot-privacidade-e-pagamentos.jpg'alt=”some text” width=250 height=100></center><br/>
+
+<center><h2><VAR>VERIFICAÇÃO I.A. (IMAGENS)</VAR></h2></center>
+<p></p>
+<br>
+<center><p id="demo">Carregando...</p></center>
+
+<script>
+var data = 'modelId=85b166e3-cffd-454c-ad3f-b6ad27f60eff&urls=https://apoioentrega.vteximg.com.br/arquivos/ids/450825/10713.jpg?v=637051869150870000';
+
+var xhr = new XMLHttpRequest();
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+
+    document.getElementById('demo').innerHTML = (this.responseText);
+
+  }
+
+});
+
+xhr.open("POST", "https://app.nanonets.com/api/v2/ImageCategorization/LabelUrls/");
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader("authorization", "Basic " + btoa("gI34_BHfkNwdFnUAFIwgr4l9nB-TSXsC:"));
+xhr.send(data);
+
+</script>
+
+<center><a href='https://dataplatform.cloud.ibm.com/studio/watson-vision-combined/novoprojetoprateleiras_2030245810/view?project_id=eed4c160-6a7d-419b-8215-294dd08967b2&training_definition_id=7823069b-1f1e-4087-a955-e5631f39f222'>IBM-CLOAD-WATSON I.A.</a></center>
+
+<hr/>   
+
+</body>
+</html>
